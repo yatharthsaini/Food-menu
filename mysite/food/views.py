@@ -3,6 +3,7 @@ from .models import Item
 from django.shortcuts import render, redirect
 from .forms import ItemForm
 from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
 
 
 # Create your views here.
@@ -27,11 +28,15 @@ def item(request):
 
 def detail(request, item_id):
     item = Item.objects.get(pk=item_id)
-    context ={
+    context = {
         'item': item,
     }
     return render(request, "food/detail.html", context)
 
+
+class FoodDetail(DetailView):
+    model = Item
+    template_name = 'food/detail.html'
 
 def create_item(request):
     form = ItemForm(request.POST or None)
