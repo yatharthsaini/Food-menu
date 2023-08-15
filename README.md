@@ -9,7 +9,7 @@ Also I've used the Inbuilt database in django i.e DBsqlite3 for storing the mode
 
 The concepts of Django used in building the project
 A. Views in Django
-B. Url patterns for actaul routing of urls in the app.
+B. Url patterns for actual routing of urls in the app.
 C. Models in Django for storing data in the database at the backend
 D. Admin Panel provided by Django and the Superuser functionality to actually access that admin panel
 E. Templates to add HTML and CSS codes to style up the webpages. Although I've leveraged the use of Bootstrap here
